@@ -1,47 +1,62 @@
----
-# Page meta info, like heading, footer text and nav links
 pageInfo:
-  title: Dashy
-  description: Welcome to your new dashboard!
+  title: Dashboard
+  description: Welcome
   navLinks:
-  - title: GitHub
-    path: https://github.com/Lissy93/dashy
-  - title: Documentation
-    path: https://dashy.to/docs
-
-# Optional app settings and configuration
+    - title: Website
+      path: https://sasrblx.co.uk
+      target: sametab
 appConfig:
-  theme: colorful
-
-# Main content - An array of sections, each containing an array of items
+  theme: cherry-blossom
+  layout: horizontal
+  iconSize: large
 sections:
-- name: Getting Started
-  icon: fas fa-rocket
-  items:
-  - title: Dashy Live
-    description: Development a project management links for Dashy
-    icon: https://i.ibb.co/qWWpD0v/astro-dab-128.png
-    url: https://live.dashy.to/
-    target: newtab
-  - title: GitHub
-    description: Source Code, Issues and Pull Requests
-    url: https://github.com/lissy93/dashy
-    icon: favicon
-  - title: Docs
-    description: Configuring & Usage Documentation
-    provider: Dashy.to
-    icon: far fa-book
-    url: https://dashy.to/docs
-  - title: Showcase
-    description: See how others are using Dashy
-    url: https://github.com/Lissy93/dashy/blob/master/docs/showcase.md
-    icon: far fa-grin-hearts
-  - title: Config Guide
-    description: See full list of configuration options
-    url: https://github.com/Lissy93/dashy/blob/master/docs/configuring.md
-    icon: fas fa-wrench
-  - title: Support
-    description: Get help with Dashy, raise a bug, or get in contact
-    url: https://github.com/Lissy93/dashy/blob/master/.github/SUPPORT.md
-    icon: far fa-hands-helping
-  
+  - name: Content Delivery Network
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - &ref_0
+        title: Zipline
+        icon: >-
+          https://raw.githubusercontent.com/diced/zipline/trunk/public/zipline_small.png
+        url: https://cdn.sasrblx.co.uk/dashboard
+        target: newtab
+        id: 0_2377_zipline
+      - &ref_1
+        title: Zipline Status
+        icon: >-
+          https://st4.depositphotos.com/20838724/25235/v/450/depositphotos_252352428-stock-illustration-phone-signal-bars-outline-icon.jpg
+        url: https://status.cdn.sasrblx.co.uk
+        target: newtab
+        id: 1_2377_ziplinestatus
+    filteredItems:
+      - *ref_0
+      - *ref_1
+  - name: Portainer
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - &ref_2
+        title: Portainer
+        icon: >-
+          https://i0.wp.com/easycode.page/wp-content/uploads/2021/08/portainer.png?fit=300%2C300&ssl=1
+        url: https://portainer.sasrblx.co.uk
+        target: newtab
+        id: 0_948_portainer
+      - &ref_3
+        title: Portainer Status
+        icon: >-
+          https://st4.depositphotos.com/20838724/25235/v/450/depositphotos_252352428-stock-illustration-phone-signal-bars-outline-icon.jpg
+        url: https://status.portainer.sasrblx.co.uk
+        target: newtab
+        id: 1_948_portainerstatus
+    filteredItems:
+      - *ref_2
+      - *ref_3
